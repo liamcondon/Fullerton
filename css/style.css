@@ -1,0 +1,307 @@
+
+
+/***************** F U L L E R T O N *******************/
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+
+}
+
+main {
+  padding: 2em;
+}
+
+h1 {
+  font-size: 2.3em;
+  padding-bottom: .2em;
+  border-bottom: .06em solid #4f4f4f;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+
+
+p {
+
+  padding: .7em 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+
+#menu-icon {
+  font-size: 7vh;
+  position: absolute;
+  top: .25em;
+  right: 1em;
+  border-radius: .1em;
+  color: #fff;
+}
+
+/* on mobile display children - logo and icons - vertically */
+header {
+  background-color: #000;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* text above and below icons NOT displayed on mobile*/
+header p {
+  display: none;
+  color: white;
+}
+
+/* icons displayed at bottom of header and centered */
+#icons {
+  text-align: center;
+  padding-bottom: 1em;
+}
+
+
+/*navigation to be displayed vertically if menu-icon clicked i.e. checkbox ticked, see belo*/
+/* this really should not be here */
+ul {
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  display: none; /*come back to this!!!*/
+}
+
+/* banner with background image */
+#banner {
+  background-image: url('../images/banner1.jpg');
+  min-height: 40vh;
+  background-size: cover;
+}
+
+#banner-caption {
+  background-color: #4f4f4f;
+  text-align: center;
+  color: white;
+}
+
+/*****************  PO2 Interactive Scripting ************************/
+/*****************     Read More/Read Less    ************************/
+
+#morecomp {
+  display:none;
+}
+
+#show, #hide {
+  padding: .4em;
+  font-size: .7em;
+  border-radius: .6em;
+  background-color: #858585;
+  cursor: pointer;
+  color: #fff;
+}
+
+/*****************   End of Read More/Read Less  *********************/
+
+#para2 {
+  font-weight: bold;
+}
+
+/* Flexbox has an odd default behavior where images get stretched
+horizontally to the full width of its parent container. So if you have
+a parent element (flex container) with flex-direction: column and
+a child element (flex item) which is an image, then the image’s natural
+height is maintained while the width is stretched as wide as the parent
+container. The solution is to replace your image/flex item’s align-self
+property’s default 'stretch' value with 'center'. Source -
+https://techstacker.com/how-to-prevent-image-stretching-with-flexbox/ */
+.image {
+    align-self: center;
+    border: .03em solid grey;
+    padding: .7em;
+    margin-bottom: .5em;
+}
+
+#two-images {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+
+.title-red {
+  color: red;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+section, article {
+  padding: 1.2em;
+}
+
+footer {
+  background-color: #000;
+  text-align: center;
+  font-size: .7em;
+}
+
+footer p {
+  color: white;
+}
+
+
+/*****************  PO2 Interactive Scripting ************************/
+/*********************     Popup           ***************************/
+
+/* The Modal (background) */
+.modal {
+  display: none;  /* modal box is hidden by default */
+  position: fixed;
+  z-index: 999; /* box sits on top of everything */
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* enable scroll if necessary */
+  background-color: rgba(0,0,0,0.9);
+}
+
+
+/* Modal Content */
+.modal-content {
+  background-color: #5c91c5;
+  margin: auto;
+  padding: 1em;
+  border: 1px solid #888;
+  width: 80%;
+  color: #fff;
+}
+
+/* The Close Button on modal box */
+.close {
+  color: #fff;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+
+.close:hover, .close:focus {
+  color: #000;
+  cursor: pointer;
+}
+
+#myBtn {
+  width: 100%;
+  padding: 1em;
+  margin-top: .3em;
+  background-color: #ff0000;
+  color: #e3b554;
+  font-size: 3em;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background-color: #e3b554;
+  color: #ff0000;
+}
+
+/*******************     End of Popup Styling   ***********************/
+
+
+
+
+/*--------------------------media query tablet---------------------*/
+@media only screen and (min-width: 768px) {
+  #two-images {
+    flex-direction: row;
+    justify-content: center;
+}
+
+.calendar {
+  margin-right: 1em;
+  float: left;
+}
+
+}
+/*-----------------------------------------------------------------*/
+
+
+
+
+/*--------------------------media query desktop---------------------*/
+@media only screen and (min-width: 1100px) {
+
+  header {
+    flex-direction: row;
+    height: 15vh;
+    }
+
+/* text above and below icons displayed on desktop*/
+header p {
+  display: block;
+}
+
+/*clear float on parapraph so text doesn't wrap around image*/
+p {
+  clear: left;
+}
+
+/* menu-icon not displayed on desktop */
+ #menu-icon {
+    display:none;
+  }
+
+/* move text and icons a bit to the left so they're not pushed into right corner */
+  #icons {
+    text-align: left;
+    margin-right: 1em;
+  }
+
+/* nav display in row */
+  nav ul {
+      list-style-type:none;
+      display: flex;
+      flex-direction: row;
+      background-color: #4f4f4f;
+      padding: 1em;
+    }
+
+  li a {
+    margin-right: 1em;
+  }
+
+  .container {
+    flex-direction: row;
+  }
+
+
+}
